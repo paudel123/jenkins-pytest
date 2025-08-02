@@ -16,7 +16,7 @@ pipeline {
 
         stage('Run Tests') {
             steps {
-                sh '. venv/bin/activate && mkdir -p reports && pytest tests/ --junitxml=reports/results.xml'
+                sh '. venv/bin/activate && pytest tests/ --junitxml=reports/results.xml'
             }
         }
 
